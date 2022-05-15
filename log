@@ -126,3 +126,31 @@ sudoku.c:75:9: error: ‘validaMatri’ undeclared (first use in this function);
 cc1: all warnings being treated as errors
 Compilation failed
 ba7b5d7
+Sun May 15 23:36:13 UTC 2022: 
+ sudoku.c | 38 +++++++++++---------------------------
+ 1 file changed, 11 insertions(+), 27 deletions(-)
+In file included from test.c:5:0:
+sudoku.c: In function ‘is_valid’:
+sudoku.c:50:23: error: invalid initializer
+     int validaFil[10]=0;
+                       ^
+sudoku.c:53:59: error: stray ‘\302’ in program
+         if(validaFil((n->sudo[i][j])==0 && (n->sudo[i][j] ¡= 0))
+                                                           ^
+sudoku.c:53:60: error: stray ‘\241’ in program
+         if(validaFil((n->sudo[i][j])==0 && (n->sudo[i][j] ¡= 0))
+                                                            ^
+sudoku.c:53:12: error: called object ‘validaFil’ is not a function or function pointer
+         if(validaFil((n->sudo[i][j])==0 && (n->sudo[i][j] ¡= 0))
+            ^~~~~~~~~
+sudoku.c:50:9: note: declared here
+     int validaFil[10]=0;
+         ^~~~~~~~~
+sudoku.c:54:11: error: expected ‘)’ before ‘validaFil’
+           validaFil(n->sudo[i][j])=1;
+           ^~~~~~~~~
+sudoku.c:55:7: error: expected expression before ‘}’ token
+       }
+       ^
+Compilation failed
+95d5eef

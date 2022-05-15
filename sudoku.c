@@ -45,42 +45,26 @@ void print_node(Node* n){
 }
 
 int is_valid(Node* n){
-  for(int i =0;i<9;i++){
-    int validaFil[10]={0};
-    for(int j=0;j<9;j++)
+  int i,j;
+  for(i =0;i<9;i++){
+    int validaFil[10]=0;
+    for(j=0;j<9;j++)
       {
-        if(validaFil[n->sudo[i][j]]==0 && n->sudo[i][j] ¡= 0)
-          validaFil[n->sudo[i][j]]=1;
+        if(validaFil((n->sudo[i][j])==0 && (n->sudo[i][j] ¡= 0))
+          validaFil(n->sudo[i][j])=1;
       }
   }
-  for(int columna=0;columna<9;columna++){
-    int validaColu[10]={0};
-    for(int row =0;row<9;row++)
-      {
-        if(ValidaColu[n->sudo[row][col]]¡=0)
-          return 0;
-        if(validaColu[n->sudo[row][col]]==0 && n->sudo[row][col] != 0)
-          validaColu[n->sudo[row][col]]=1;
-      }
-  }
-  for(int s=0;s<9;s++){
-    int validaMatr[10]={0};
-    int k=s,p;
-    for(p=0;p<9;p++){
-      int i=3*(k/3)+(p/3);
-      int j=3*(k%3)+(p%3);
-      if (validaMatr[n->sudo[i][j]]!=0)
-        return 0;
-      if(validMatri[n->sudo[i][j]]==0 && n->sudo[i][j] ¡=0)
-        validaMatri[n->sudo[i][j]]=1;
-    }
-  }
-   return 1;
+  return 1;
 }
 
 
 List* get_adj_nodes(Node* n){
     List* list=createList();
+    int i,j;
+    for(i=0;i<9;i++){
+      for (j=0;j<9;j++){
+      }
+    }
     return list;
 }
 

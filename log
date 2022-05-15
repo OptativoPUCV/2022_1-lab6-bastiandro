@@ -24,3 +24,57 @@ Fri May 13 22:04:58 UTC 2022:
  tests:  1|4
 total_score: 10/70
 81561e3
+Sun May 15 01:25:10 UTC 2022: 
+ sudoku.c | 30 ++++++++++++++++++++++++++++++
+ 1 file changed, 30 insertions(+)
+In file included from test.c:5:0:
+sudoku.c: In function ‘is_valid’:
+sudoku.c:48:15: error: expected ‘,’ or ‘;’ before ‘:’ token
+   for(int i =0:i<9;i++){
+               ^
+sudoku.c:48:23: error: expected ‘;’ before ‘)’ token
+   for(int i =0:i<9;i++){
+                       ^
+sudoku.c:52:57: error: stray ‘\302’ in program
+         if(validaFil[n->sudo[i][j]]==0 && n->sudo[i][j] ¡= 0)
+                                                         ^
+sudoku.c:52:58: error: stray ‘\241’ in program
+         if(validaFil[n->sudo[i][j]]==0 && n->sudo[i][j] ¡= 0)
+                                                          ^
+sudoku.c:52:59: error: lvalue required as left operand of assignment
+         if(validaFil[n->sudo[i][j]]==0 && n->sudo[i][j] ¡= 0)
+                                                           ^
+sudoku.c:60:12: error: ‘ValidaColu’ undeclared (first use in this function); did you mean ‘validaColu’?
+         if(ValidaColu[n->sudo[row][col]]¡=0)
+            ^~~~~~~~~~
+            validaColu
+sudoku.c:60:12: note: each undeclared identifier is reported only once for each function it appears in
+sudoku.c:60:36: error: ‘col’ undeclared (first use in this function)
+         if(ValidaColu[n->sudo[row][col]]¡=0)
+                                    ^~~
+sudoku.c:60:41: error: stray ‘\302’ in program
+         if(ValidaColu[n->sudo[row][col]]¡=0)
+                                         ^
+sudoku.c:60:42: error: stray ‘\241’ in program
+         if(ValidaColu[n->sudo[row][col]]¡=0)
+                                          ^
+sudoku.c:57:9: error: variable ‘validaColu’ set but not used [-Werror=unused-but-set-variable]
+     int validaColu[10]={0};
+         ^~~~~~~~~~
+sudoku.c:74:10: error: ‘validMatri’ undeclared (first use in this function); did you mean ‘validaMatr’?
+       if(validMatri[n->sudo[i][j]]==0 && n->sudo[i][j] ¡=0)
+          ^~~~~~~~~~
+          validaMatr
+sudoku.c:74:56: error: stray ‘\302’ in program
+       if(validMatri[n->sudo[i][j]]==0 && n->sudo[i][j] ¡=0)
+                                                        ^
+sudoku.c:74:57: error: stray ‘\241’ in program
+       if(validMatri[n->sudo[i][j]]==0 && n->sudo[i][j] ¡=0)
+                                                         ^
+sudoku.c:75:9: error: ‘validaMatri’ undeclared (first use in this function); did you mean ‘validaMatr’?
+         validaMatri[n->sudo[i][j]]=1;
+         ^~~~~~~~~~~
+         validaMatr
+cc1: all warnings being treated as errors
+Compilation failed
+88c96cf
